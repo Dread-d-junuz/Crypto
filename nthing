@@ -1,0 +1,20 @@
+import random
+
+messages = [
+    "# Here's a hug from your compiler 🤗",
+    "# Pro tip: coffee makes bugs run faster ☕",
+    "# ASCII llama incoming: (‾ʘ̅‿ʘ̅‾)🐾",
+    "# TODO: add artificial intelligence to this function",
+    "# Warning: too much code may lead to enlightenment 🧘‍♂️"
+]
+
+def insert_easter_egg(filename):
+    try:
+        with open(filename, 'a') as f:
+            f.write('\n' + random.choice(messages) + '\n')
+        print(f"Easter egg added to {filename}")
+    except Exception as e:
+        print(f"Oops! Something went wrong: {e}")
+
+# Example use:
+# insert_easter_egg("main.py")
